@@ -1,35 +1,36 @@
-module.exports = {
+let port = 4000
 
+module.exports = {
   apps: [
     {
       name: 'API',
       script: 'dist/api/app.js',
-      env:{'PORT': 3000},
+      env: { PORT: port++ },
     },
     {
       name: 'Athentication',
       script: 'dist/auth/app.js',
-      env:{'PORT': 3001},
+      env: { PORT: port++ },
     },
     {
       name: 'CRM',
       script: 'dist/crm/app.js',
-      env:{'PORT': 3002},
+      env: { PORT: port++ },
     },
     {
       name: 'HTTP',
       script: 'dist/http/app.js',
-      env:{'PORT': 3003},
+      env: { PORT: port++ },
     },
     {
       name: 'Messages',
       script: 'dist/messages/app.js',
-      env:{'PORT': 3004},
+      env: { PORT: port++ },
     },
     {
       name: 'Chat',
       script: 'dist/messages/app.js',
-      env:{'PORT': 3005},
+      env: { PORT: port++ },
     },
   ],
   // deploy: {
