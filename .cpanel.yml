@@ -1,4 +1,6 @@
 deployment:
   tasks:
-    - mkdir -p tmp
-    - echo $(date +%s) > tmp/restart.txt
+    - export DEPLOYPATH=/home/drasoto/public_html/
+    - /bin/cp -R dist $DEPLOYPATH
+    - mkdir -p $DEPLOYPATH/tmp
+    - echo $(date +%s) > $DEPLOYPATH/tmp/restart.txt
